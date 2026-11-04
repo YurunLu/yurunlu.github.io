@@ -5,26 +5,31 @@ window.ACADEMIC_PROFILE = {
     "My research focuses on artificial intelligence for biomedical data modeling and precision health. I develop representation learning methods for physiological time series and biological networks, with applications in glucose dynamics, disease early warning and multi-omics analysis. I am particularly interested in combining dynamical systems theory with interpretable machine learning to understand individual differences in health and disease."
   ],
   interests: ["Biomedical AI", "Physiological time series", "Dynamical systems", "Multi-omics integration", "Explainable machine learning"],
+  collaborators: [
+    { name: "Yong Wang", scholar: "https://scholar.google.com/citations?user=M0fnh30AAAAJ&hl=en" },
+    { name: "Luonan Chen", scholar: "https://scholar.google.com/citations?user=Uoqv8rkAAAAJ&hl=en" },
+    { name: "Kazuyuki Aihara", scholar: "https://scholar.google.com/citations?user=30X8WK4AAAAJ&hl=en" }
+  ],
   selectedWork: [
     {
       label: "CGMformer", venue: "National Science Review · 2025", role: "Co-first author",
       title: "A pretrained transformer model for decoding individual glucose dynamics from continuous glucose monitoring data",
-      summary: "CGMformer learns representations of individual glucose dynamics from continuous glucose monitoring data. The pretrained model supports diabetes screening, metabolic subtyping and prediction of individual postprandial glucose responses.",
-      contribution: "I co-conceived the study, co-designed and developed CGMformer, assembled multicenter and real-world CGM datasets with collaborators, performed computational analyses and co-wrote the manuscript.",
+      summary: "We developed CGMformer, a pretrained transformer that learns representations of individual glucose dynamics from continuous glucose monitoring data.",
+      details: "We combined self-supervised pretraining with task-specific fine-tuning to support screening for diabetes and its complications, subtyping of non-diabetic individuals, and prediction of individual postprandial glucose responses.",
       paper: "https://doi.org/10.1093/nsr/nwaf039", github: "https://github.com/YurunLu/CGMformer"
     },
     {
-      label: "Pancreatic cancer multi-omics", venue: "Cell Stem Cell · 2025", role: "Co-first author",
+      label: "HNetDig · Pancreatic cancer multi-omics", venue: "Cell Stem Cell · 2025", role: "Co-first author",
       title: "A pancreatic cancer organoid biobank links multi-omics signatures to therapeutic response and clinical evaluation of statin combination therapy",
-      summary: "This collaborative study integrated multi-omics profiling and drug-response measurements from a pancreatic cancer organoid biobank to investigate treatment resistance and inform clinical evaluation of statin combination therapy.",
-      contribution: "I contributed to computational and statistical analyses of the multi-omics data. The associated HNetDig code provides a heterogeneous network embedding approach for identifying coding and noncoding cancer drivers.",
+      summary: "We developed HNetDig, a heterogeneous network embedding method for genome-wide identification of coding and noncoding cancer drivers. We integrated whole-genome sequencing data with biological networks to jointly represent mutations, regulatory elements, genes and pathways, and prioritize driver genes and regulatory elements in pancreatic cancer.",
+      details: "We applied HNetDig to pancreatic cancer genomic data within this collaborative organoid study, complementing multi-omics analyses of therapeutic response and resistance.",
       paper: "https://doi.org/10.1016/j.stem.2025.07.008", github: "https://github.com/YurunLu/HNetDig"
     },
     {
       label: "RE-GOA", venue: "Bioinformatics · 2022", role: "First author",
       title: "Annotating regulatory elements by heterogeneous network embedding",
-      summary: "RE-GOA integrates gene regulatory networks, protein interactions and Gene Ontology to annotate regulatory elements. It supports functional enrichment analysis of noncoding genomic regions, with annotation resources for human and mouse.",
-      contribution: "I co-conceived the study, designed and implemented RE-GOA, performed data analyses with collaborators and contributed to interpretation and manuscript writing.",
+      summary: "We developed RE-GOA to annotate regulatory elements by integrating gene regulatory networks, protein interactions and Gene Ontology through heterogeneous network embedding.",
+      details: "We generated annotation resources for human and mouse and developed a tool for functional enrichment analysis of noncoding genomic regions, supporting analyses of ChIP-seq, ATAC-seq and GWAS data.",
       paper: "https://doi.org/10.1093/bioinformatics/btac185", github: "https://github.com/YurunLu/RE-GOA"
     }
   ],
@@ -46,14 +51,14 @@ window.ACADEMIC_PROFILE = {
   ],
   patentSummary: "CGMformer-related patent applications. English titles are translations of the published Chinese titles.",
   projects: [
-    { title: "National Key Research and Development Program of China", code: "2022YFA1004800" },
-    { title: "JST Moonshot R&D", code: "JPMJMS2021" },
-    { title: "Shenzhen Medical Research Fund", code: "E250200612" },
-    { title: "Ultra-Early Detection and Intervention of Heart Failure via Heart-Failure DNB (HF-DNB)", role: "Project participant" }
+    { title: "Multi-Scale Causal Theory and Applications in Precision Medicine", code: "2022YFA1004800", source: "National Key Research and Development Program of China" },
+    { title: "Comprehensive Mathematical Understanding of the Complex Control System between Organs and Challenge for Ultra-Early Precision Medicine", code: "JPMJMS2021", source: "JST Moonshot R&D Program", url: "https://www.jst.go.jp/moonshot/en/program/goal2/21_aihara.html" },
+    { title: "AI-Enabled Systems Analysis of Complex Diseases and Research on Intervention Strategies", code: "E250200612", source: "Shenzhen Medical Research Fund" },
+    { title: "Ultra-Early Detection and Intervention of Heart Failure via Heart-Failure DNB (HF-DNB)", source: "Supplementary funding under the JST Moonshot R&D project (JPMJMS2021)", role: "Project participant" }
   ],
   education: [
-    { date: "Sep 2022 – Jun 2025", title: "Ph.D. in Computer Software and Theory", institution: "University of Chinese Academy of Sciences", detail: "Research at the Academy of Mathematics and Systems Science, Chinese Academy of Sciences. Advisor: Prof. Yong Wang." },
-    { date: "Sep 2019 – Jun 2022", title: "M.S. in Computer Software and Theory", institution: "University of Chinese Academy of Sciences", detail: "Research at the Academy of Mathematics and Systems Science, Chinese Academy of Sciences. Thesis: Constructing biological knowledge graphs based on representation learning of heterogeneous networks." },
+    { date: "Sep 2022 – Jun 2025", title: "Ph.D. in Computer Software and Theory", institution: "University of Chinese Academy of Sciences", detail: "Research at the Academy of Mathematics and Systems Science, Chinese Academy of Sciences. Advisor: Prof. Yong Wang.", thesis: "Research on Representation Learning for Biological Multiscale Regulatory Systems" },
+    { date: "Sep 2019 – Jun 2022", title: "M.S. in Computer Software and Theory", institution: "University of Chinese Academy of Sciences", detail: "Research at the Academy of Mathematics and Systems Science, Chinese Academy of Sciences.", thesis: "Constructing Biological Knowledge Graphs Based on Representation Learning of Heterogeneous Networks" },
     { date: "Sep 2015 – Jun 2019", title: "B.S. in Mathematics and Applied Mathematics", institution: "Shandong University", detail: "Taishan College" }
   ],
   experience: [

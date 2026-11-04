@@ -21,19 +21,19 @@
   <header class="topbar">
     <a class="wordmark" href="#about" aria-label="Yurun Lu home">YL<span>.</span></a>
     <nav aria-label="Main navigation">
-      <a href="#about">About</a><a href="#publications">Publications</a><a href="#patents">Patents</a><a href="#projects">Projects</a><a href="#education">Education</a><a href="#experience">Experience</a>
+      <a href="#about">About</a><a href="#publications">Publications</a><a href="#patents">Patents</a><a href="#projects">Projects</a><a href="#education">Education</a><a href="#experience">Work Experience</a>
     </nav>
     <a class="top-scholar" href="https://scholar.google.com/citations?user=JhKocwYAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Google Scholar <span aria-hidden="true">↗</span></a>
   </header>
   <div class="page-shell">
     <aside class="profile" aria-label="Researcher profile">
-      <div class="portrait" aria-hidden="true"><svg viewBox="0 0 180 180"><defs><pattern id="lines" width="18" height="18" patternUnits="userSpaceOnUse"><path d="M0 18 18 0M-5 5 5-5M13 23 23 13" stroke="#c4d6cf" stroke-width=".6"/></pattern></defs><rect width="180" height="180" fill="#e7eeea"/><rect width="180" height="180" fill="url(#lines)"/><circle cx="90" cy="90" r="59" fill="#143b3b"/><text x="90" y="106" text-anchor="middle" fill="#fff" font-family="Georgia,serif" font-size="49">YL</text></svg></div>
+      <div class="portrait"><img src="./assets/portrait.jpg" alt="Portrait of Yurun Lu" width="600" height="900" fetchpriority="high" decoding="async"></div>
       <h2>Yurun Lu</h2>
       <p class="role">Project Researcher</p>
       <p class="affiliation">International Research Center<br>for Neurointelligence (IRCN)<br><strong>The University of Tokyo</strong></p>
       <p class="location"><span aria-hidden="true">◎</span> Tokyo, Japan</p>
+      <div class="profile-email"><span class="email-label">Email</span><a href="mailto:luyurun@g.ecc.u-tokyo.ac.jp">luyurun@g.ecc.u-tokyo.ac.jp</a></div>
       <div class="profile-links">
-        <a href="mailto:luyurun@g.ecc.u-tokyo.ac.jp">Email <span aria-hidden="true">↗</span></a>
         <a href="https://scholar.google.com/citations?user=JhKocwYAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Google Scholar <span aria-hidden="true">↗</span></a>
         <a href="https://github.com/YurunLu" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
       </div>
@@ -46,21 +46,25 @@
         <p class="hero-subtitle">Understanding biological complexity<br>through data and dynamics.</p>
         <div id="biography" class="biography"></div>
         <div id="interests" class="interest-tags" aria-label="Research interests"></div>
+        <div class="collaborators"><h3>Key Collaborators</h3><div id="collaborator-links" aria-label="Collaborators on Google Scholar"></div></div>
       </section>
       <section id="publications">
         <div class="section-heading"><div><p class="eyebrow">Research contributions</p><h2>Publications</h2></div><a href="https://scholar.google.com/citations?user=JhKocwYAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Google Scholar ↗</a></div>
-        <h3 class="subheading">Selected work</h3>
+        <h3 class="subheading">Representative Work</h3>
         <div id="selected-work" class="selected-work"></div>
-        <div class="publication-list-heading"><h3 class="subheading">Publication list</h3><p>† Equal contribution</p></div>
+        <details class="publication-archive">
+        <summary><h3 class="subheading">Publication List</h3></summary>
+        <p class="publication-note">† Equal contribution</p>
         <div class="publication-tools"><label class="search-label" for="publication-search">Search publications</label><input id="publication-search" type="search" placeholder="Search title, author or journal…" autocomplete="off"><label class="sr-only" for="publication-filter">Publication type</label><select id="publication-filter"><option value="all">All publications</option><option value="journal">Journal articles</option><option value="preprint">Preprints</option></select></div>
         <p id="publication-count" class="result-count" aria-live="polite"></p>
         <div id="publication-list"></div>
+        </details>
       </section>
       <section id="patents"><div class="section-heading"><div><p class="eyebrow">Translating research</p><h2>Patents</h2></div></div><div id="patent-list"></div></section>
       <section id="projects"><div class="section-heading"><div><p class="eyebrow">Collaborative research</p><h2>Projects</h2></div></div><div id="project-list" class="project-list"></div></section>
       <section id="education"><div class="section-heading"><div><p class="eyebrow">Academic background</p><h2>Education</h2></div></div><div id="education-list" class="timeline"></div></section>
-      <section id="experience"><div class="section-heading"><div><p class="eyebrow">Research appointments</p><h2>Experience</h2></div></div><div id="experience-list" class="timeline"></div></section>
-      <section id="beyond" class="beyond-section"><div><p class="eyebrow">Beyond research</p><h2>Out on the trail.</h2><p>Outside research, I enjoy hiking.</p></div><svg viewBox="0 0 230 120" aria-hidden="true"><path d="m10 105 66-78 47 54 31-39 66 63" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m57 50 19-23 18 21-17-6-8 8-7-4z" fill="currentColor" opacity=".12"/><path d="M4 109h222M112 109l24-25 9 4 9-12" fill="none" stroke="currentColor" stroke-width="1.2"/><circle cx="180" cy="25" r="10" fill="none" stroke="currentColor" stroke-width="1.2"/></svg></section>
+      <section id="experience"><div class="section-heading"><div><p class="eyebrow">Research appointments</p><h2>Work Experience</h2></div></div><div id="experience-list" class="timeline"></div></section>
+      <section id="beyond" class="beyond-section"><div><p class="eyebrow">Beyond research</p><h2>Out on the trail.</h2><p>Outside research, I enjoy hiking.</p></div><img class="hiking-photo" src="./assets/hiking.jpg" alt="Hiking on a rocky mountain trail in warm sunlight." width="1200" height="1200" loading="lazy" decoding="async"></section>
       <footer><p>© <span id="year">2026</span> Yurun Lu</p><a href="#about">Back to top ↑</a></footer>
       <noscript><p>This page uses JavaScript to display the research record. You can also view <a href="https://scholar.google.com/citations?user=JhKocwYAAAAJ&amp;hl=en">my publications on Google Scholar</a>.</p></noscript>
     </main>

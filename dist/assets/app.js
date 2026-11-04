@@ -19,6 +19,11 @@
   const append = (id, child) => document.getElementById(id).append(child);
   for (const paragraph of profile.biography) append('biography', node('p', paragraph));
   for (const interest of profile.interests) append('interests', node('span', interest));
+  for (const collaborator of profile.collaborators) {
+    const link = externalLink(`${collaborator.name} ↗`, collaborator.scholar);
+    link.setAttribute('aria-label', `${collaborator.name} on Google Scholar`);
+    append('collaborator-links', link);
+  }
   profile.selectedWork.forEach((work, index) => {
     const article = node('article', undefined, 'work');
     article.append(node('span', String(index + 1).padStart(2, '0'), 'work-number'));
@@ -27,11 +32,11 @@
     kicker.append(node('span', work.label), node('span', work.venue), node('span', work.role));
     const title = node('h4');
     title.append(externalLink(work.title, work.paper));
-    const contribution = node('p', undefined, 'contribution');
-    contribution.append(node('strong', 'My contribution. '), document.createTextNode(work.contribution));
     const links = node('div', undefined, 'work-links');
     links.append(externalLink('Read paper ↗', work.paper), externalLink('GitHub ↗', work.github));
-    content.append(kicker, title, node('p', work.summary), contribution, links);
+    content.append(kicker, title, node('p', work.summary));
+    if (work.details) content.append(node('p', work.details));
+    content.append(links);
     article.append(content);
     append('selected-work', article);
   });
@@ -91,8 +96,11 @@
     const article = node('article', undefined, 'project');
     article.append(node('span', String(index + 1).padStart(2, '0'), 'project-index'));
     const content = node('div');
-    content.append(node('h3', project.title));
+    const heading = node('h3');
+    heading.append(project.url ? externalLink(project.title, project.url) : document.createTextNode(project.title));
+    content.append(heading);
     if (project.code) content.append(node('p', project.code, 'project-code'));
+    if (project.source) content.append(node('p', project.source, 'project-source'));
     if (project.role) content.append(node('p', project.role));
     article.append(content);
     append('project-list', article);
@@ -104,6 +112,11 @@
       const content = node('div', undefined, 'timeline-content');
       content.append(node('h3', item.title), node('p', item.institution));
       if (item.detail) content.append(node('p', item.detail, 'detail'));
+      if (item.thesis) {
+        const thesis = node('p', undefined, 'thesis');
+        thesis.append(node('strong', 'Thesis: '), document.createTextNode(item.thesis));
+        content.append(thesis);
+      }
       article.append(content);
       append(id, article);
     }
