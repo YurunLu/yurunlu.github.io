@@ -57,8 +57,8 @@ window.ACADEMIC_PROFILE = {
     { title: "Ultra-Early Detection and Intervention of Heart Failure via Heart-Failure DNB (HF-DNB)", source: "Supplementary funding under the JST Moonshot R&D project (JPMJMS2021)", role: "Project participant" }
   ],
   education: [
-    { date: "Sep 2022 – Jun 2025", title: "Ph.D. in Computer Software and Theory", institution: "University of Chinese Academy of Sciences", detail: "Research at the Academy of Mathematics and Systems Science, Chinese Academy of Sciences. Advisor: Prof. Yong Wang.", thesis: "Research on Representation Learning for Biological Multiscale Regulatory Systems" },
-    { date: "Sep 2019 – Jun 2022", title: "M.S. in Computer Software and Theory", institution: "University of Chinese Academy of Sciences", detail: "Research at the Academy of Mathematics and Systems Science, Chinese Academy of Sciences.", thesis: "Constructing Biological Knowledge Graphs Based on Representation Learning of Heterogeneous Networks" },
+    { date: "Sep 2022 – Jun 2025", title: "Ph.D. in Computer Software and Theory", institution: "University of Chinese Academy of Sciences", detail: "Advisors: Profs. Songmao Zhang and Yong Wang.", thesis: "Research on Representation Learning for Biological Multiscale Regulatory Systems" },
+    { date: "Sep 2019 – Jun 2022", title: "M.S. in Computer Software and Theory", institution: "University of Chinese Academy of Sciences", detail: "Advisor: Prof. Songmao Zhang.", thesis: "Constructing Biological Knowledge Graphs Based on Representation Learning of Heterogeneous Networks" },
     { date: "Sep 2015 – Jun 2019", title: "B.S. in Mathematics and Applied Mathematics", institution: "Shandong University", detail: "Taishan College" }
   ],
   experience: [
