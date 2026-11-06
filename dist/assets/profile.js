@@ -2,7 +2,8 @@
 window.ACADEMIC_PROFILE = {
   biography: [
     "I am a Project Researcher at the International Research Center for Neurointelligence (IRCN), The University of Tokyo, working with Prof. Kazuyuki Aihara and Prof. Luonan Chen. I received my Ph.D. in Computer Software and Theory from the Academy of Mathematics and Systems Science, Chinese Academy of Sciences under the supervision of Prof. Yong Wang.",
-    "My research focuses on artificial intelligence for biomedical data modeling and precision health. I develop representation learning methods for physiological time series and biological networks, with applications in glucose dynamics, disease early warning and multi-omics analysis. I am particularly interested in combining dynamical systems theory with interpretable machine learning to understand individual differences in health and disease."
+    "My research focuses on artificial intelligence for biomedical data modeling and precision health. I develop representation learning methods for physiological time series and biological networks, with applications in glucose dynamics, disease early warning and multi-omics analysis. I am particularly interested in combining dynamical systems theory with interpretable machine learning to understand individual differences in health and disease.",
+    "I welcome research collaborations in biomedical AI, dynamical systems, and precision health."
   ],
   interests: ["Biomedical AI", "Physiological time series", "Dynamical systems", "Multi-omics integration", "Explainable machine learning"],
   collaborators: [
@@ -57,11 +58,11 @@ window.ACADEMIC_PROFILE = {
     { title: "Ultra-Early Detection and Intervention of Heart Failure via Heart-Failure DNB (HF-DNB)", source: "Supplementary funding under the JST Moonshot R&D project (JPMJMS2021)", role: "Project participant" }
   ],
   education: [
-    { date: "Sep 2022 – Jun 2025", title: "Ph.D. in Computer Software and Theory", institution: "University of Chinese Academy of Sciences", detail: "Advisors: Profs. Songmao Zhang and Yong Wang.", thesis: "Research on Representation Learning for Biological Multiscale Regulatory Systems" },
+    { date: "Sep 2022 – Jun 2025", title: "Ph.D. in Computer Software and Theory", institution: "Academy of Mathematics and Systems Science, Chinese Academy of Sciences", detail: "Advisors: Profs. Songmao Zhang and Yong Wang.", thesis: "Research on Representation Learning for Biological Multiscale Regulatory Systems" },
     { date: "Sep 2019 – Jun 2022", title: "M.S. in Computer Software and Theory", institution: "University of Chinese Academy of Sciences", detail: "Advisor: Prof. Songmao Zhang.", thesis: "Constructing Biological Knowledge Graphs Based on Representation Learning of Heterogeneous Networks" },
     { date: "Sep 2015 – Jun 2019", title: "B.S. in Mathematics and Applied Mathematics", institution: "Shandong University", detail: "Taishan College" }
   ],
   experience: [
-    { date: "Sep 2025 – Present", title: "Project Researcher", institution: "International Research Center for Neurointelligence (IRCN), The University of Tokyo", detail: "Working with Prof. Kazuyuki Aihara and Prof. Luonan Chen. Research on glucose regulatory dynamics and disease early warning using dynamical systems theory and representation learning." }
+    { date: "Sep 2025 – Present", title: "Project Researcher", institution: "International Research Center for Neurointelligence (IRCN), The University of Tokyo", detail: "Working with Prof. Kazuyuki Aihara and Prof. Luonan Chen. I develop computational methods to study complex biological systems and support early disease detection." }
   ]
 };
