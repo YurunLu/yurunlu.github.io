@@ -1,7 +1,7 @@
 /* Edit this file to update the homepage. No build step is required. */
 window.ACADEMIC_PROFILE = {
   biography: [
-    "I am a Project Researcher at the International Research Center for Neurointelligence (IRCN), The University of Tokyo, working with Prof. Kazuyuki Aihara and Prof. Luonan Chen. I received my Ph.D. in Computer Software and Theory from the University of Chinese Academy of Sciences under the supervision of Prof. Yong Wang.",
+    "I am a Project Researcher at the International Research Center for Neurointelligence (IRCN), The University of Tokyo, working with Prof. Kazuyuki Aihara and Prof. Luonan Chen. I received my Ph.D. in Computer Software and Theory from the Academy of Mathematics and Systems Science, Chinese Academy of Sciences under the supervision of Prof. Yong Wang.",
     "My research focuses on artificial intelligence for biomedical data modeling and precision health. I develop representation learning methods for physiological time series and biological networks, with applications in glucose dynamics, disease early warning and multi-omics analysis. I am particularly interested in combining dynamical systems theory with interpretable machine learning to understand individual differences in health and disease."
   ],
   interests: ["Biomedical AI", "Physiological time series", "Dynamical systems", "Multi-omics integration", "Explainable machine learning"],
