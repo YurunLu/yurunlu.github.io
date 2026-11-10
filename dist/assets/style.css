@@ -13,3 +13,38 @@
 @media(max-width:720px){html{scroll-padding-top:150px}.topbar nav{display:grid;grid-template-columns:repeat(3,1fr);gap:6px 18px;overflow:visible;padding-bottom:0}.topbar{row-gap:12px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 @media print{.topbar,.publication-tools,.result-count,.work-links,footer a{display:none}.page-shell{padding:0;gap:28px;grid-template-columns:180px 1fr}.profile{position:static}.portrait{width:100px;height:100px}main>section{break-inside:avoid}body{font-size:11px;background:white}a{color:inherit}h1{font-size:38px}.hero-subtitle{font-size:21px}}
+.trail-motto {
+  display: flex;
+  flex: 0 0 45%;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+}
+.trail-motto svg {
+  width: 190px;
+  max-width: 100%;
+}
+.beyond-section p.trail-quote {
+  margin: 0;
+  color: var(--ink);
+  font: italic 600 28px/1.25 var(--serif);
+  letter-spacing: -.4px;
+}
+@media (max-width: 540px) {
+  .beyond-section {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+  .trail-motto {
+    width: 100%;
+    flex-basis: auto;
+  }
+  .trail-motto svg {
+    width: 170px;
+  }
+  .beyond-section p.trail-quote {
+    font-size: 26px;
+  }
+}
