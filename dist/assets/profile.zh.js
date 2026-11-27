@@ -2,6 +2,11 @@
 (() => {
   'use strict';
   const profile = window.ACADEMIC_PROFILE;
+  const collaboratorNames = {
+    "Yong Wang": "王勇",
+    "Luonan Chen": "陈洛南",
+    "Kazuyuki Aihara": "合原一幸"
+  };
   const selectedWork = [
     {
       role: "共同第一作者",
@@ -36,16 +41,20 @@
     { title: "基于心力衰竭动态网络生物标志物（HF-DNB）的心力衰竭超早期检测与干预", source: "JST Moonshot 研发项目追加经费（JPMJMS2021）", role: "项目参与者" }
   ];
   const education = [
-    { date: "2022.09 – 2025.06", title: "博士 · 计算机软件与理论", institution: "中国科学院数学与系统科学研究院", detail: "导师：Songmao Zhang 教授、Yong Wang 教授。" },
-    { date: "2019.09 – 2022.06", title: "硕士 · 计算机软件与理论", institution: "中国科学院数学与系统科学研究院", detail: "导师：Songmao Zhang 教授。" },
+    { date: "2022.09 – 2025.06", title: "博士 · 计算机软件与理论", institution: "中国科学院数学与系统科学研究院", detail: "导师：张松懋研究员、王勇研究员。", thesis: "生物多尺度调控系统的表示学习研究" },
+    { date: "2019.09 – 2022.06", title: "硕士 · 计算机软件与理论", institution: "中国科学院数学与系统科学研究院", detail: "导师：张松懋研究员。", thesis: "基于异构网络表示学习的生物知识图谱构建" },
     { date: "2015.09 – 2019.06", title: "学士 · 数学与应用数学", institution: "山东大学", detail: "泰山学堂" }
   ];
   Object.assign(profile, {
     biography: [
-      "我现任东京大学国际神经智能研究中心（IRCN）特任研究员（Project Researcher），与 Kazuyuki Aihara 教授和 Luonan Chen 教授合作开展研究。我在中国科学院数学与系统科学研究院获得计算机软件与理论专业博士学位，师从 Yong Wang 教授。",
+      "我现任东京大学国际神经智能研究中心（IRCN）特任研究员（Project Researcher），与合原一幸教授和陈洛南教授合作开展研究。我在中国科学院数学与系统科学研究院获得计算机软件与理论专业博士学位。",
       "我的研究聚焦于面向生物医学数据建模与精准健康的人工智能方法。我开发生理时间序列和生物网络的表示学习方法，并应用于血糖动态、疾病早期预警与多组学分析。我尤其关注动力系统理论与可解释机器学习的结合，以理解健康与疾病中的个体差异。"
     ],
     interests: ["生物医学人工智能", "生理时间序列", "动力系统", "多组学整合", "可解释机器学习"],
+    collaborators: profile.collaborators.map(collaborator => ({
+      ...collaborator,
+      name: collaboratorNames[collaborator.name] || collaborator.name
+    })),
     selectedWork: profile.selectedWork.map((work, index) => ({ ...work, ...selectedWork[index] })),
     publications: profile.publications.map(publication => publication.type === 'preprint'
       ? { ...publication, details: "上列 Cell Stem Cell 论文的早期预印本" }
@@ -59,7 +68,7 @@
       date: "2025.09 – 至今",
       title: "特任研究员（Project Researcher）",
       institution: "东京大学国际神经智能研究中心（IRCN）",
-      detail: "与 Kazuyuki Aihara 教授和 Luonan Chen 教授合作，开发用于研究复杂生物系统和支持疾病早期检测的计算方法。"
+      detail: "与合原一幸教授和陈洛南教授合作，开发用于研究复杂生物系统和支持疾病早期检测的计算方法。"
     }))
   });
 })();
