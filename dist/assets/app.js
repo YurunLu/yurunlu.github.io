@@ -74,11 +74,6 @@
     ).sort((a, b) => b.year - a.year);
     const container = document.getElementById('publication-list');
     container.replaceChildren();
-    const journals = results.filter(pub => pub.type === 'journal').length;
-    const preprints = results.length - journals;
-    document.getElementById('publication-count').textContent = chinese
-      ? `${journals} 篇期刊论文 · ${preprints} 篇预印本`
-      : `${journals} journal article${journals === 1 ? '' : 's'} · ${preprints} preprint${preprints === 1 ? '' : 's'}`;
     if (!results.length) container.append(node('p', labels.empty, 'empty-note'));
     let previousYear;
     for (const pub of results) {
@@ -139,8 +134,7 @@
       append(id, article);
     }
   };
-  timeline('education-list', profile.education);
-  timeline('experience-list', profile.experience);
+  timeline('experience-list', [...profile.experience, ...profile.education]);
   document.getElementById('year').textContent = String(new Date().getFullYear());
   if ('IntersectionObserver' in window) {
     const navLinks = Array.from(document.querySelectorAll('.topbar nav a'));
