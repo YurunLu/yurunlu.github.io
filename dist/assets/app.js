@@ -1,6 +1,22 @@
 (() => {
   'use strict';
   const profile = window.ACADEMIC_PROFILE;
+  const chinese = document.documentElement.lang === 'zh-Hans';
+  const labels = chinese ? {
+    readPaper: '阅读论文 ↗',
+    code: '代码 ↗',
+    preprint: '预印本',
+    empty: '没有找到符合条件的论文。',
+    thesis: '学位论文：',
+    scholar: '的 Google Scholar 主页'
+  } : {
+    readPaper: 'Read paper ↗',
+    code: 'Code ↗',
+    preprint: 'Preprint',
+    empty: 'No publications match your search.',
+    thesis: 'Thesis: ',
+    scholar: ' on Google Scholar'
+  };
   const node = (tag, text, className) => {
     const element = document.createElement(tag);
     if (text !== undefined) element.textContent = text;
@@ -21,7 +37,7 @@
   for (const interest of profile.interests) append('interests', node('span', interest));
   for (const collaborator of profile.collaborators) {
     const link = externalLink(`${collaborator.name} ↗`, collaborator.scholar);
-    link.setAttribute('aria-label', `${collaborator.name} on Google Scholar`);
+    link.setAttribute('aria-label', `${collaborator.name}${labels.scholar}`);
     append('collaborator-links', link);
   }
   profile.selectedWork.forEach((work, index) => {
@@ -33,7 +49,7 @@
     const title = node('h4');
     title.append(externalLink(work.title, work.paper));
     const links = node('div', undefined, 'work-links');
-    links.append(externalLink('Read paper ↗', work.paper), externalLink('GitHub ↗', work.github));
+    links.append(externalLink(labels.readPaper, work.paper), externalLink('GitHub ↗', work.github));
     content.append(kicker, title, node('p', work.summary));
     if (work.details) content.append(node('p', work.details));
     content.append(links);
@@ -60,8 +76,10 @@
     container.replaceChildren();
     const journals = results.filter(pub => pub.type === 'journal').length;
     const preprints = results.length - journals;
-    document.getElementById('publication-count').textContent = `${journals} journal article${journals === 1 ? '' : 's'} · ${preprints} preprint${preprints === 1 ? '' : 's'}`;
-    if (!results.length) container.append(node('p', 'No publications match your search.', 'empty-note'));
+    document.getElementById('publication-count').textContent = chinese
+      ? `${journals} 篇期刊论文 · ${preprints} 篇预印本`
+      : `${journals} journal article${journals === 1 ? '' : 's'} · ${preprints} preprint${preprints === 1 ? '' : 's'}`;
+    if (!results.length) container.append(node('p', labels.empty, 'empty-note'));
     let previousYear;
     for (const pub of results) {
       if (pub.year !== previousYear) {
@@ -71,11 +89,11 @@
       const article = node('article', undefined, 'publication');
       const heading = node('h4');
       heading.append(externalLink(pub.title, `https://doi.org/${pub.doi}`));
-      if (pub.type === 'preprint') heading.append(node('span', 'Preprint', 'badge'));
+      if (pub.type === 'preprint') heading.append(node('span', labels.preprint, 'badge'));
       const meta = node('p', undefined, 'pub-meta');
       meta.append(node('em', pub.venue), document.createTextNode(` · ${pub.details} (${pub.year})`));
       article.append(heading, emphasizeName(pub.authors), meta);
-      if (pub.code) article.append(externalLink('Code ↗', pub.code, 'pub-link'));
+      if (pub.code) article.append(externalLink(labels.code, pub.code, 'pub-link'));
       container.append(article);
     }
   };
@@ -114,7 +132,7 @@
       if (item.detail) content.append(node('p', item.detail, 'detail'));
       if (item.thesis) {
         const thesis = node('p', undefined, 'thesis');
-        thesis.append(node('strong', 'Thesis: '), document.createTextNode(item.thesis));
+        thesis.append(node('strong', labels.thesis), document.createTextNode(item.thesis));
         content.append(thesis);
       }
       article.append(content);
